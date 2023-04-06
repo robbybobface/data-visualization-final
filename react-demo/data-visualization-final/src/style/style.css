@@ -3,6 +3,11 @@ body {
 	font-weight: 400;
 	background: #202020;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 #main-wrapper {
 	margin: 40px auto;
 }
