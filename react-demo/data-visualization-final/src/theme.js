@@ -74,6 +74,9 @@ const theme = createTheme({
 		seashell: {
 			main: "#EEE2DF",
 		},
+		pinkToggle: {
+			main: "#E2B0A6",
+		},
 	},
 	typography: {
 		fontFamily: ["K2D", "Roboto", "Helvetica", "Arial", "sans-serif"].join(","),

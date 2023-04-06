@@ -5,17 +5,28 @@ body {
 }
 
 ::-webkit-scrollbar {
-    display: none;
+	display: none;
 }
 
 #main-wrapper {
 	margin: 40px auto;
 }
-#chart1 {
-	margin: 0px auto;
+#chart2021 {
+	margin: -35px -60px 0px 0px;
+}
+#chart2020 {
+	margin: -35px auto 0px 30px;
+}
+#chart2019 {
+	margin: -50px auto 0px auto;
 }
 
 #timecount {
+	color: #eee2df;
+	font-family: "new-order";
+}
+
+#timecount2 {
 	color: #eee2df;
 	font-family: "new-order";
 }
@@ -28,14 +39,14 @@ h1 {
 text {
 	fill: #eee2df !important;
 	/*    display: none;*/
-	font-size: 1.1em;
+	font-size: 1.5em;
 }
 
 .simulation-container {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
-	align-items: center;
+	align-items: stretch;
 	margin-top: -50px;
 }
 
