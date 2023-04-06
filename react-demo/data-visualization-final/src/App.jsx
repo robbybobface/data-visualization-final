@@ -271,7 +271,7 @@ function App() {
     }
 
     // Update Time Visual
-    d3.select("#timecount .cnt").text(time.current);
+    d3.select("#timecount .cnt").text(formatTime(time.current));
 
     // Update counters.
     d3.select("#chart1")
@@ -281,6 +281,15 @@ function App() {
     setGroups(tempGroups);
     // timerLoop = d3.timeout(timer, 500);
   } // @end timer()
+
+  const formatTime = (localTime) => {
+    let hours = Math.floor((localTime + 240) / 60);
+    const minutes = localTime % 60;
+    const ampm = hours < 12 ? "am" : hours >= 24 ? "am" : "pm";
+    return `${hours % 12 === 0 ? 12 : hours % 12}:${
+      minutes < 10 ? "0" : ""
+    }${minutes}${ampm}`;
+  };
 
   useEffect(() => {
     const svg1 = d3
@@ -582,9 +591,9 @@ function App() {
       // console.log("time on button: " + started.lastTime);
       if (started.lastTime === 0 || started.lastTime === null) {
         clearInterval(timerLoop.current);
-        timerLoop.current = setInterval(timer, 500);
+        timerLoop.current = setInterval(timer, 10);
       } else {
-        timerLoop.current = setInterval(timer, 500);
+        timerLoop.current = setInterval(timer, 10);
       }
     }
   }, [started]);
@@ -653,7 +662,10 @@ function App() {
           id="timecount"
           sx={{ fontSize: "2rem", textAlign: "center", ml: -2, mb: 2 }}
         >
-          Time so far: <span className="cnt">{time.current}</span>
+          Time of day:{" "}
+          <span className="cnt">
+            {time.current ? formatTime(time.current) : "4:00am"}
+          </span>
         </Typography>
         <Box display="flex" justifyContent="center" alignItems="center" mb={-4}>
           <Button
