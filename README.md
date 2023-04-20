@@ -1,0 +1,3 @@
+# Data Visualization Final
+
+This final project visualizes the daily lives of Americans as they go about their days and participate in various activities. This visualization was built for Northeastern's EECE5642 Data Visualization Final Project and uses D3.js and ReactJS. The final project was designed in two variants. One showcasing just the 2021 year, and another containing the 2019, 2020, 2021, 2003, and 2014 years. The 2021 simulation can viewed here. [Click Here for 2021!](https://data-visualization-simulation-2021.netlify.app/) and the other simulation can be viewed here. [Click Here for the Rest!](https://data-visualization-simulation.netlify.app/)
